@@ -75,7 +75,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-function vv() {
+function venv() {
 	if [[ $1 == "" ]];
 	then
 		source venv/bin/activate
