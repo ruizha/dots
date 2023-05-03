@@ -5,11 +5,15 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:/opt/homebrew/bin:/usr/local/bin
 
+export CLICOLOR=1
+export TERM=xterm-256color
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
+# to know which specific one was loaded, run: echo $eANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -153,3 +157,8 @@ function sdot() {
 alias tmux="TERM=screen-256color-bce tmux"
 alias zz="source ~/.zshrc"
 alias python="python3"
+fpath=($fpath "/Users/ruizhang/.zfunctions")
+
+# Set typewritten ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt typewritten
