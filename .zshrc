@@ -89,7 +89,7 @@ function pin() {
 		touch $HOME/.pbklist
 	fi
 	if [[ $1 == "" ]]; then
-		echo "Please specify 'mark', 'rm', 'list', or a label"
+		echo "Please specify 'mark', 'rm', 'clearall', 'list', 'find', or a label"
 	elif [[ $1 == "mark" || $1 == "mk" ]]; then
 		pin rm $2 # delete entry if it already exists
 		echo $2::$(pwd) >> $HOME/.pbklist
