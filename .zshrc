@@ -119,6 +119,7 @@ function pin() {
 }
 
 function sdot() {
+	pin mark tmpmark_dnu
 	cp $HOME/.zshrc $HOME/dots/.zshrc
 	cp $HOME/.tmux.conf $HOME/dots/.tmux.conf
 	cp $HOME/.vimrc $HOME/dots/.vimrc
@@ -126,9 +127,11 @@ function sdot() {
 	git add -A
 	git commit -m "Updating dots $(date +%d.%m.%y-%H:%M:%S)"
 	git push origin main
+	pin mark tmpmark_dnu
+	pin rm tmpmark_dnu
 }
 
-func underscore() {
+func repsp() {
 	for file in *; do
 		mv $file ${file// /_}
 	done
