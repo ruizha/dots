@@ -119,7 +119,7 @@ function pin() {
 }
 
 function sdot() {
-	pin mark tmpmark_dnu
+	pin mark placeholdermark
 	cp $HOME/.zshrc $HOME/dots/.zshrc
 	cp $HOME/.tmux.conf $HOME/dots/.tmux.conf
 	cp $HOME/.vimrc $HOME/dots/.vimrc
@@ -127,7 +127,8 @@ function sdot() {
 	git add -A
 	git commit -m "Updating dots $(date +%d.%m.%y-%H:%M:%S)"
 	git push origin main
-	pin tmpmark_dnu
+	pin placeholdermark
+	pin rm placeholdermark
 }
 
 func repsp() {
