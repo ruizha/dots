@@ -127,7 +127,7 @@ function sdot() {
 	git add -A
 	git commit -m "Updating dots $(date +%d.%m.%y-%H:%M:%S)"
 	git push origin main
-	pin mark tmpmark_dnu
+	pin tmpmark_dnu
 	pin rm tmpmark_dnu
 }
 
