@@ -118,11 +118,15 @@ function pin() {
 	fi
 }
 
+# Updates my dotfiles
+# Needs git to be properly configured
 function sdot() {
 	pin mark placeholdermark
+
 	cp $HOME/.zshrc $HOME/dots/.zshrc
 	cp $HOME/.tmux.conf $HOME/dots/.tmux.conf
 	cp $HOME/.vimrc $HOME/dots/.vimrc
+
 	cd $HOME/dots
 	git add -A
 	git commit -m "Updating dots $(date +%d.%m.%y-%H:%M:%S)"
