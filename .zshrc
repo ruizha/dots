@@ -128,6 +128,12 @@ function sdot() {
 	git push origin main
 }
 
+func underscore() {
+	for file in *; do
+		mv $file ${file// /_}
+	done
+}
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
