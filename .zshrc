@@ -128,7 +128,6 @@ function sdot() {
 	git commit -m "Updating dots $(date +%d.%m.%y-%H:%M:%S)"
 	git push origin main
 	pin placeholdermark
-	pin rm placeholdermark
 }
 
 func repsp() {
